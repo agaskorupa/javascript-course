@@ -1,7 +1,14 @@
-var a = "5";
+var a = "apple";
 var b = 5;
 
-console.log(a + b);
-console.log(Math.round(7.8));
+if(isNaN (a)){
+
+    console.log("that aint even a number, thickie");
+
+} else{
+
+    console.log("meaning of life is " + (a *b));
+
+}
 
 
