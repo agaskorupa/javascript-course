@@ -1,17 +1,7 @@
-function getAverage (a,b) {
+var a = "5";
+var b = 5;
 
-        var average = (a + b) / 2; //local variable
-        console.log(average);
-        return average;
+console.log(a + b);
+console.log(Math.round(7.8));
 
-}
 
-var myResult = getAverage(7,11); //global variable
-
-function logResult(){
-
-    console.log("the average is " + myResult + " inside the function");
-
-}
-
-logResult();
