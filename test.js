@@ -1,25 +1,16 @@
-var colourChanger = document.getElementById("colour-changer");
+var myForm = document.forms.myForm;
+var message = document.getElementById("message");
 
-var colours = ["red", "blue", "green", "pink"];
+myForm.onsubmit = function(){
 
-var counter = 0;
+    if(myForm.name.value == ""){
 
-function changeColour(){
+        message.innerHTML = "please enter a name";
+        return false;
 
-if (counter >= colours.length){
-    counter = 0;
-}
+    } else{
 
-    colourChanger.style.background = colours[counter];
-    counter++;
-
-}
-
-var myTimer = setInterval(changeColour, 3000);
-
-colourChanger.onclick = function(){
-
-    clearInterval(myTimer);
-    colourChanger.innerHTML = "Timer stopped";
-
+        message.innerHTML = "";
+        return true;
+    }
 };
